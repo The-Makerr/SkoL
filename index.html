@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" href="./Icon.ico" type="image/x-icon">
+  <meta content="SkoL" property="og:title" />
+  <meta content="SkoL is a free privacy and efficiency-based browser developed by a 15-year-old" property="og:description" />
+  <meta content="#2a004a" data-react-helmet="true" name="theme-color" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(./Background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    .shortcut-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .shortcut {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: var(--shortcut-color, #252525);
+      border-radius: 4px;
+      color: #f7f7f7;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .shortcut i {
+      margin-right: 5px;
+    }
+
+    .shortcut:hover {
+      background-color: var(--shortcut-hover-color, rgb(0, 0, 0));
+      color: #ffffff;
+    }
+
+    p {
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    .search-bar {
+      margin-top: 20px;
+      color: #f7f7f7;
+    }
+
+    .search-input {
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #252525;
+      background-color: #252525;
+      color: #f7f7f7;
+      border-radius: 4px;
+      width: 400px;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #252525;
+      color: #f7f7f7;
+      border: none;
+      border-radius: 4px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-button:hover {
+      background-color: rgb(43, 9, 77);
+      color: #ffffff;
+    }
+
+    /* App-specific colors */
+    .shortcut.youtube:hover {
+      --shortcut-color: #ff0000; /* Red */
+      --shortcut-hover-color: #cc0000;
+    }
+
+    .shortcut.cdkeys:hover {
+      --shortcut-color: #0c0020; /* Green */
+      --shortcut-hover-color: #0c0020;
+    }
+
+    .shortcut.amazon:hover {
+      --shortcut-color: #ff9400; /* Blue */
+      --shortcut-hover-color: #ff9400;
+    }
+
+    .shortcut.discord:hover {
+      --shortcut-color: #7289da; /* Discord Blue */
+      --shortcut-hover-color: #5469d4;
+    }
+
+    .shortcut.spotify:hover {
+      --shortcut-color: #1db954; /* Spotify Green */
+      --shortcut-hover-color: #1ed760;
+    }
+
+    .shortcut.disney-plus:hover {
+      --shortcut-color: #0039E6; /* Disney Plus Red */
+      --shortcut-hover-color: #0039E6;
+    }
+
+    .shortcut.netflix:hover {
+      --shortcut-color: #e50914; /* Netflix Red */
+      --shortcut-hover-color: #b2070f;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      /* Adjust styles for screens smaller than 600px */
+      h1 {
+        font-size: 24px;
+      }
+
+      .search-input {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      /* Adjust styles for screens smaller than 400px */
+      h1 {
+        font-size: 20px;
+      }
+
+      .search-input {
+        width: 200px;
+      }
+
+      .shortcut {
+        padding: 8px 16px;
+        margin: 0 5px;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>SkoL</h1>
+    <p>Designed and produced to please your eyes and PC.</p>
+    <form class="search-bar" method="get" action="https://duckduckgo.com/">
+      <input class="search-input" type="text" name="q" placeholder="Search..." required>
+      <button class="search-button" type="submit">Go</button>
+    </form>
+    <div class="shortcut-list">
+      <a class="shortcut youtube" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+      <a class="shortcut cdkeys" href="https://www.cdkeys.com" target="_blank"><i class="fas fa-key"></i> CDKeys</a>
+      <a class="shortcut amazon" href="https://www.amazon.com" target="_blank"><i class="fab fa-amazon"></i> Amazon</a>
+      <a class="shortcut discord" href="https://www.discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+      <a class="shortcut spotify" href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+    </div>
+    <div class="shortcut-list">
+      <a class="shortcut disney-plus" href="https://www.disneyplus.com" target="_blank"><i class="fab fa-disney"></i> Disney+</a>
+      <a class="shortcut netflix" href="https://www.netflix.com" target="_blank"><i class="fab fa-netflix"></i> Netflix</a>
+    </div>
+  </div>
+</body>
+</html>
